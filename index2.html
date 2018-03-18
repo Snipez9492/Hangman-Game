@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hangman-Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <script type="text/javascript">
+        // var rappers = ["Jay Z", "Nas", "Andre 3000", "Drake", "Kendrick Lamar"];
+        var rappers = ["JayZ", "Nas", "Andre 3000", "Drake", "Kendrick Lamar"];
+        var wins = 0;
+        var losses = 0;
+        var guessleft = 10;
+        var unanswered = [];
+        var correctAns = [];
+        var letterguess = [];
+        var wrongAns = [];
+        var computerGuess = rappers[Math.floor(Math.random() * rappers.length)];
+        // unanswered = rappers.splice(" ");
+        // console.log("rappers.splice: ",unanswered)
+        var compGuessArray = computerGuess.toLowerCase().split("");
+        console.log("This is the array: " + compGuessArray);
+        for (var i = 0; i < compGuessArray.length; i++) {
+            unanswered.push("_");
+        }
+        console.log("unanswered: ", unanswered);
+        function evalGuess(person_guess) {
+            if (guessleft => 1) {
+                // for loops need to loop through arrays
+                guessleft--;
+                console.log('Guesses: ', guessleft);
+                for (var i = 0; i < compGuessArray.length; i++) {
+                    // We are trying create a new array that consists of "_" for every letter of the word the computer chose
+                    if (person_guess === compGuessArray[i]) {
+                        console.log('Person Guess: ', person_guess, "ComputerGuess: ", compGuessArray)
+                        unanswered.splice(i, 1, person_guess);
+                        console.log('correct: ', unanswered);
+                    }
+                }
+                if (person_guess !== compGuessArray[i]) {
+                    letterguess.push(person_guess);
+                    console.log("Wrong: ", letterguess);
+                }
+            } else {
+                alert("You ran out of chances")
+            }
+        }
+        // console.log(unanswered.join(" "));
+        document.onkeyup = function (event) {
+            // takes in a key and saves in variable person_guess
+            var person_guess = event.key;
+            console.log("Person Guess is: " + person_guess);
+            evalGuess(person_guess.toLowerCase());
+        }
+            // compare the person_guess to the letters in the rappers array 
+            // string
+            // computerGuess = "JayZ"   // string
+            // what we want... ["J", "a", "y", "Z"]
+            // how do we convert a string into an array...hint: .split()
+            // var compGuessArray = computerGuess.split("");
+            // console.log("This is the array: " + compGuessArray);
+            //     // for loops need to loop through arrays
+            //     var unanswered = new Array();
+            //     for (var i = 0; i < compGuessArray.length; i++) {
+            //         // We are trying create a new array that consists of "_" for every letter of the word the computer chose
+            //         // unanswered = rappers.splice(" ");
+            //         unanswered.push("_");
+            //         console.log(i + ": " + unanswered);
+            //         if (guessleft => 1) {
+            //             if (person_guess === compGuessArray[i]) {
+            //                 correctAns.splice(1, 0, person_guess);
+            //                 console.log(correctAns);
+            //             }
+            //         }
+            //         else {
+            //             alert("You ran out of chances")
+            //         }
+            //     }
+            //     console.log(unanswered.join(" "));
+            //     // create a array with "_ _ _ _", which replaces the letters in rappers words array with "_"
+            //     // look into split(), 
+            //     // replace each person_guess in the correct spot in the word of rappers array
+            //     // push to the other array the correct letter
+            //     if (person_guess !== computerGuess) {
+            //         losses++;
+            //         console.log("Loss is recorded ", losses);
+            //     }
+            //     else {
+            //         wins++;
+            //         console.log("Wins is recorded", wins);
+            //     }
+            // }
+        
+    </script>
+
+    <h1 class="title">Hangman-Game</h1>
+
+    <div class="Letters"></div>
+    <div class="Wrong-Letters"></div>
+
+
+
+</body>
+
+</html>

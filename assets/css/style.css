@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    text-align: center;
+}
+header{
+    border: 10px solid black;
+    position: fixed;
+    text-align: center;
+    display: inline;
+}
+
+body{
+background-color: aqua;
+}
+
+.Letters{
+background-color: beige;
+width: 200px;
+border: 25px solid black;
+padding: 25px;
+margin: 25px; 
+}
