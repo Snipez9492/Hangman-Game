@@ -3,20 +3,53 @@
     text-align: center;
 }
 header{
+    background-color: beige;
     border: 10px solid black;
-    position: fixed;
-    text-align: center;
-    display: inline;
+    padding: 70px;
+    margin-bottom: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    font-style: initial;
+    
 }
 
 body{
-background-color: aqua;
+    background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/stonehaven.png);
+    
 }
 
-.Letters{
-background-color: beige;
-width: 200px;
-border: 25px solid black;
-padding: 25px;
-margin: 25px; 
+
+
+    #rightGuess{
+    background-color: beige;
+    border: 10px solid black;
+    padding: 50px;
+    margin-bottom: 20px;
+    }
+
+    #wrongGuess{
+    background-color: beige;
+    border: 10px solid black;
+    padding: 50px;
+    margin-bottom: 20px;
+        }
+
+.score{
+    background-color: whitesmoke;
+    width: 300px;
+    border: 10px solid black;
+    padding: 25px;
+    margin: 25px; 
+}
+
+p{
+    text-align: center;
+    
+}
+
+.underscore{
+    background-color: beige;
+border: 10px solid black;
+padding: 50px;
+margin-bottom: 20px
 }

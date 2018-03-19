@@ -6,22 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hangman-Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <header>
-   <span><h1>Hangman-Game</h1></span> 
+    <h1>Hangman-Game</h1>
 </header>
 
-<body class="swag">
+<body>
 
-    <section class="Letters">
-        <div></div>
-        <div class="Wrong-Letters"></div>
-    </section>
+    <div class= "underscore"></div>
+
+    
+        <div id ="rightGuess">
+            <p>
+                <h1>Right Answer</h1>
+            </p>
+        </div>
+   
+
+    
+        <div id= "wrongGuess">
+            <p>
+                <h1>Wrong Answer</h1>
+            </p>
+        </div>
+    
+
+    <footer class="score">
+        <strong>
+            <p>Wins: </p>
+        </strong>
+        <strong>
+            <p>Losses: </p>
+        </strong>
+    </footer>
 
 
-    <script scr="./assets/javascript/game.js"></script>
+    <script src="./assets/javascript/game.js" type="text/javascript"></script>
 </body>
 
 </html>
